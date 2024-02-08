@@ -29,6 +29,7 @@ vim.o.colorcolumn = "80"
 vim.o.undofile = true
 vim.o.completeopt = "menuone,preview,noinsert"
 vim.o.termguicolors = true
+vim.o.clipboard = "unnamedplus"
 vim.o.scrolloff = 8
 vim.cmd.highlight("clear SignColumn")
 
