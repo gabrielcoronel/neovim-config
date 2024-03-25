@@ -102,6 +102,7 @@ require("lazy").setup({
         end
     },
     {
+        -- Directory viewer
         "nvim-tree/nvim-tree.lua",
         dependencies = {
             "nvim-tree/nvim-web-devicons"
@@ -114,7 +115,6 @@ require("lazy").setup({
             end)
         end
     },
-
     -- LSP Setup
     {
         -- LSP basic configuration
@@ -144,34 +144,6 @@ require("lazy").setup({
                     -- NOTE: F5 keymap is left for code execution
                 end
             })
-        end
-    },
-    {
-        -- Completion framework
-        "hrsh7th/nvim-cmp",
-        dependencies = {
-            "hrsh7th/cmp-nvim-lsp",
-        },
-        config = function()
-            local cmp = require("cmp")
-
-            cmp.setup({
-                mapping = cmp.mapping.preset.insert({
-                    ["<C-i>"] = cmp.mapping.complete(),
-                    ["<CR>"] = cmp.mapping.confirm({ select = false })
-                }),
-                completion = {
-                    autocomplete = false
-                }
-            })
-        end
-    },
-    {
-        -- Snippet framework
-        "L3MON4D3/LuaSnip",
-        config = function()
-            require("luasnip.loaders.from_vscode").lazy_load()
-            require("luasnip.loaders.from_snipmate").lazy_load()
         end
     },
     {
